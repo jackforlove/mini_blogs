@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="db" uuid="77ad71ef-90d2-449b-87f4-fcb26f2556f1">
+      <auth-required>false</auth-required>
+    </data-source>
+    <data-source name="db [2]" uuid="48ecbeaf-0461-4a65-b5e6-c9d56aecd43e">
+      <auth-required>false</auth-required>
+    </data-source>
+    <data-source name="Sqlite (Xerial) - identifier.sqlite" uuid="aa06ca78-2345-46fa-9ce6-5166f29ea4f1">
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+    </data-source>
+    <data-source name="db [3]" uuid="cb8e8e9c-6788-412f-94f9-afcec58a38d8" />
+    <data-source name="db [4]" uuid="f615fced-16ee-46a8-83d2-92d5e60f3bad" />
+    <data-source name="db [5]" uuid="747e2299-650b-4a8a-b7c4-602cf49443fd">
+      <auth-required>false</auth-required>
+    </data-source>
+    <data-source name="db [6]" uuid="153f35f3-3efd-47c7-8f51-9a9cd91c67c5">
+      <auth-required>false</auth-required>
+    </data-source>
+    <data-source name="Sqlite (Xerial) - identifier.sqlite [2]" uuid="e69dd8ef-98b1-449b-9f16-1cc1fd8e1c97">
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+    </data-source>
+    <data-source name="Sqlite (Xerial) - identifier.sqlite [3]" uuid="55ad5b4c-9a78-4215-94a8-9c72454bafca">
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+    </data-source>
+  </component>
+</project>

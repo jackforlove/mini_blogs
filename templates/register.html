@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/static/bootstrap.css"/>
+    <link rel="stylesheet" href="/static/edmure.css"/>
+    <link rel="stylesheet" href="/static/commons.css"/>
+    <link rel="stylesheet" href="/static/row-avatar.css"/>
+
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+{% include 'header.html' %}
+<form  action="/register/" method="post">
+{#    {% csrf_token %}#}
+    <center>
+    <h1 style="background: ghostwhite">注册页面</h1>
+        <p>用户名{{ obj.user }} {{ obj.errors.user.0 }}{{ msg }}</p>
+         <p>密码  {{ obj.pwd }}{{ obj.errors.pwd.0 }}</p>
+
+    <input  type="submit"  value="GO!"/>
+    </center>
+</form>
+</body>
+</html>

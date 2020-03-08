@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/static/bootstrap.css"/>
+    <link rel="stylesheet" href="/static/edmure.css"/>
+    <link rel="stylesheet" href="/static/commons.css"/>
+    <link rel="stylesheet" href="/static/row-avatar.css"/>
+
+
+</head>
+<body>
+{% include 'header.html'%}
+<div class="container">
+    <div>
+        <div class="col-md-8">
+            <div class="article-list">
+                {% for row in article_list %}
+                    <div class="article-item clearfix">
+                        <h3><a href="#">{{ row.title }}</a></h3>
+                        <div class="clearfix">
+                            <a class="avatar left" href="#">
+                            </a>
+                            {{ row.content |slice:'0:200'}}。。。
+                        </div>
+                        <div class="footers">
+                            <a href="#">
+                                <i class="fa fa-user-o" aria-hidden="true"></i>
+                                <span>{{ row.cate.user.username }}</span>
+                            </a>
+                            <span>发布于 2020-1-11</span>
+                            <a href="#" class="ele">
+                                <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                                <span>{{ row.comment_count }}</span>
+                            </a>
+                        </div>
+
+                    </div>
+                {% endfor %}
+
+            </div>
+
+
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default hot-recommend">
+                <div class="panel-heading">吐血推荐</div>
+                <div class="panel-body">
+                    <ul class="list-unstyled">
+                        <a href="">移花接木病毒来袭，赌博软件伺机而动</a>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel panel-default hot-comment">
+                <div class="panel-heading">评论最多</div>
+                <div class="panel-body">
+                    <ul class="list-unstyled">
+                        <a href="">远控免杀从入门到实践(6)-代码篇-Powershell</a>
+                    </ul>
+                </div>
+            </div>
+             <div class="panel panel-default hot-comment">
+                <div class="panel-heading">当前热门</div>
+                <div class="panel-body">
+                    <ul class="list-unstyled">
+<a href="">Tomcat-Ajp漏洞：我是如何一步步写出POC的？</a>
+                    </ul>
+                </div>
+            </div>
+             <div class="panel panel-default hot-comment">
+                <div class="panel-heading">每日精选</div>
+                <div class="panel-body">
+                    <ul class="list-unstyled">
+<a href="">警惕“驱动人生”无文件挖矿再次更新</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/static/bootstrap.css"/>
+    <link rel="stylesheet" href="/static/edmure.css"/>
+    <link rel="stylesheet" href="/static/commons.css"/>
+    <link rel="stylesheet" href="/static/row-avatar.css"/>
+    <title>个人中心</title>
+    <style>
+        .atricle{
+            display: inline-block;
+            padding: 5px 5px;
+            margin: 5px 5px;
+            border: 5px solid #dddddd;
+        }
+        .art{
+            padding: 5px 5px;
+            margin: 5px 5px;
+        }
+    </style>
+</head>
+<body>
+{% include 'header.html' %}
+<div class="container">
+
+<center><h1 style="background: gainsboro ">
+        个人中心  </h1>
+
+    <h3 style="background:ghostwhite">筛选项</h3>
+</center>
+    <div  class="article-list">
+        {% for i in art_cate %}
+            {% if i.0 == kwgrgs.artcate_id %}
+            <a  href="article-{{ i.0 }}-{{ kwgrgs.cate_id }}" class="atricle">{{ i.1 }}</a>
+            {% else%}
+            <a href="article-{{ i.0 }}-{{ kwgrgs.cate_id }}" class="art">{{ i.1 }}</a>
+             {% endif %}
+        {% endfor %}
+    </div>
+<center>
+<h3 style="background: gainsboro">文章</h3>
+</center>
+{% for i in req %}
+    <ul>----------------</ul>
+    <b href="#"><h3>★-{{ i.title }}</h3></b>
+    <ul>{{ i.content}}</ul>
+{% endfor %}
+
+</div>
+
+</body>
+</html>
